@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GoalList from './Components/Goals/GoalList';
+import AddGoal from "./Components/GoalForm/AddGoal";
+const CourseData = [
+  {"id":1,"Name":"Master 1"},
+  {"id":2,"Name":"Master 2"},
+  {"id":3,"Name":"Master 3"}
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <AddGoal />
+      <GoalList cData = {CourseData} />
     </div>
   );
 }
